@@ -1,5 +1,20 @@
 var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update });
 
+var ball;
+var paddle;
+var bricks;
+
+var ballOnPaddle = true;
+
+var lives = 3;
+var score = 0;
+
+var scoreText;
+var livesText;
+var introText;
+
+var s;
+
 function preload() {
     game.load.atlas('breakout', 'assets/games/breakout/breakout.png', 'assets/games/breakout/breakout.json');
     game.load.image('starfield', 'assets/misc/starfield.jpg');
